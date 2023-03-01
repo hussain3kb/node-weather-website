@@ -8,7 +8,7 @@ const apiKey = "e000cf8a9da4260c16a33940fb47f274";
 const forecast = async (cityName) => {
   messageOne.textContent = `Loading for ${cityName}`;
   messageTwo.textContent = "";
-  const geoLocationAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`;
+  const geoLocationAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`;
   const res = await fetch(geoLocationAPI);
   const data = await res.json();
   console.log(data);
